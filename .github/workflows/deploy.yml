@@ -25,6 +25,9 @@ jobs:
     - name: Build and package with Maven
       run: mvn clean package
 
+    - name: Login Vercel
+      run: vercel login --github
+
     - name: Deploy to Vercel
       run: vercel --prod --yes
       env:
