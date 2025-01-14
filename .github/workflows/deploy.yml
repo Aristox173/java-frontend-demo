@@ -25,7 +25,10 @@ jobs:
     - name: Build and package with Maven
       run: mvn clean package
 
+    - name: Login to Vercel
+      run: vercel login --token ${{ AezehAAaKoee4jOap8frBK56 }}
+
     - name: Deploy to Vercel
       run: vercel --prod --yes
       env:
-        VERCEL_TOKEN2: ${{ secrets.VERCEL_TOKEN2 }}
+        VERCEL_TOKEN: ${{ AezehAAaKoee4jOap8frBK56 }}
